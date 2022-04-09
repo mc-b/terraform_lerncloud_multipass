@@ -3,13 +3,11 @@
 #  
 
 output "ip_vm" {
-  value = "${ 
-  formatlist( "type 'multipass list'")}"
+  value = "${format( "type in 'multipass list'")}"
   description = "The IP address of the server instance."
 }
 
 output "fqdn_vm" {
-  value ="${ 
-  formatlist( "http://%s.mshome.net", var.module )}" 
+  value = "${format( "http://%s.mshome.net", var.module )}" 
   description = "The FQDN of the server instance."
 }
