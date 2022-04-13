@@ -1,10 +1,6 @@
-terraform {
-  required_providers {
-    null = {
-      source = "hashicorp/null"
-    }
-  }
-}
+###
+#   Ressourcen
+#
 
 resource "null_resource" "multipass" {
   triggers = {
