@@ -8,6 +8,6 @@ output "ip_vm" {
 }
 
 output "fqdn_vm" {
-  value = "${format( "http://%s.mshome.net", var.module )}" 
+  value = "${format( "%s.mshome.net", var.module )}" 
   description = "The FQDN of the server instance."
 }
