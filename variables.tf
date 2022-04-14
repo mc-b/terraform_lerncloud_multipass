@@ -22,6 +22,12 @@ variable "cpu" {
     default = 1
 }
 
+# wird nicht ausgewertet
+variable "ports" {
+    type    = list(number)
+    default = [ 22, 80 ]
+}
+
 variable "userdata" {
     description = "Cloud-init Script"
     default = "../modules/base.yaml"
