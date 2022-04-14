@@ -10,7 +10,7 @@ variable "module" {
 
 variable "mem" {
     type    = string
-    default = "4GB"
+    default = "2GB"
 }
 
 variable "disk" {
@@ -19,7 +19,7 @@ variable "disk" {
 }
 
 variable "cpu" {
-    default = 2
+    default = 1
 }
 
 variable "userdata" {
