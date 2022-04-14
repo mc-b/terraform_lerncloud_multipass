@@ -3,7 +3,7 @@
 #  
 
 output "ip_vm" {
-  value = "${format( "type in 'multipass list'")}"
+  value = var.module
   description = "The IP address of the server instance."
 }
 
