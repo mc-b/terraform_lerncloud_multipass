@@ -3,11 +3,16 @@
 #  
 
 output "ip_vm" {
-  value = var.module
+  value       = var.module
   description = "The IP address of the server instance."
 }
 
 output "fqdn_vm" {
-  value = "${format( "%s.mshome.net", var.module )}" 
+  value       = format("%s.mshome.net", var.module)
   description = "The FQDN of the server instance."
+}
+
+output "description" {
+  value = var.description 
+  description = "Description VM"
 }
