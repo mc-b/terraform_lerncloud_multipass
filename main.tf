@@ -17,7 +17,13 @@ resource "null_resource" "multipass" {
     on_failure = continue
   }
 
-  # terraform destroy
+  # terraform destroy - ohne wird VM physikalisch nicht geloescht
+  provisioner "local-exec" {
+    when    = destroy
+    command = "multipass set client.primary-name=primary"
+
+    on_failure = continue
+  }  
   provisioner "local-exec" {
     when    = destroy
     command = "multipass delete ${self.triggers.name} --purge"
